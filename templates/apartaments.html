@@ -1,0 +1,31 @@
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+</style>
+
+<h1>Mieszkania w Gliwicach</h1>
+
+
+<table id="demo">
+  <tr>
+    <th>Opis</th>
+    <th>Powierzchnia</th>
+    <th>Cena</th>
+    <th>Miasto</th>
+    <th>URL</th>
+  </tr>
+  {% for u in ofs %}
+  <tr>
+    <td>{{ u[0] }}</td>
+    <td>{{ u[1] }}</td>
+    <td>{{ u[2] }}</td>
+    <td>{{ u[3] }}</td>
+    <td><a href="{{ u[4] }}"> {{u[4]}} </a><br></td>
+  </tr>
+{% endfor %}
+</table>
